@@ -177,6 +177,8 @@ func (c *ShellWsController)Get(){
 		rethandle(errors.New("Can't Found session info"),http.StatusOK)
 		return
 	}
+	info := shellinfo
+	c.DelSession("keyinfo")
 	con,err := upgrader.Upgrade(c.Ctx.ResponseWriter,c.Ctx.Request,nil)
 	if _, ok := err.(websocket.HandshakeError); ok {
 		beego.Error("Not a websocket connection")
@@ -186,7 +188,7 @@ func (c *ShellWsController)Get(){
 		rethandle(err,http.StatusOK)
 		return
 	}
-	go websocketHandle(con,shellinfo)
+	go websocketHandle(con,info)
 	return
 }
 
