@@ -8,9 +8,9 @@ import (
 )
 
 const(
-	ShellUrl 					= "/api/v1.0/web/shell"
-	ShellUrlPath 				= "/api/v1.0/web"
-	ShellUrlImgPng				= ShellUrlPath + 	"/static/img/favicon.png"
+	ShellUrl 			= "/api/v1.0/web/shell"
+	ShellUrlPath 			= "/api/v1.0/web"
+	ShellUrlImgPng			= ShellUrlPath  + 	"/static/img/favicon.png"
 	ShellUrlJsJqueryMinJs      	= ShellUrlPath  +	"/static/js/jquery.min.js"
 	ShellUrlJsPopperMinJs 		= ShellUrlPath  +	"/static/js/popper.min.js"
 	ShellUrlJsBootstrapMinJs 	= ShellUrlPath  +	"/static/js/bootstrap.min.js"
@@ -19,7 +19,7 @@ const(
 	ShellUrlCssBootstrapMinCss 	= ShellUrlPath	+	"/static/css/bootstrap.min.css"
 	ShellUrlCssXtermMinCss		= ShellUrlPath	+	"/static/css/xterm.min.css"
 	ShellUrlCssFullScreenMinCss	= ShellUrlPath	+	"/static/css/fullscreen.min.css"
-	ShellUrlShellWs 			= ShellUrlPath  +	"/shell/ws"
+	ShellUrlShellWs 		= ShellUrlPath  +	"/shell/ws"
 	ShellUrlShellStatic 		= ShellUrlPath 	+	"/static/"
 )
 type ShellController struct {
